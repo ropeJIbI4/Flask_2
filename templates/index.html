@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Вход {% endblock %}
+
+{% block header %}
+{{ super() }}
+{% endblock %}
+
+{% block nav %}
+{{ super() }}
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Электронная почта:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <input type="submit" value="Войти">
+    </form>
+{% endblock main %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}
